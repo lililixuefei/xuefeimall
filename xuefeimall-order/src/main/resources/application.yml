@@ -1,0 +1,21 @@
+server:
+  port: 9000
+
+spring:
+  datasource:
+    username: root
+    password: Li123456
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.101.156.32:3306/gulimall_oms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.101.156.32:8848
+  application:
+    name: xuefeimall-order
+# mybatis-plus 配置
+mybatis-plus:
+  mapperLocations: classpath:mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
